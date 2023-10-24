@@ -1,4 +1,5 @@
 import Home from './Home';
 import Faq from './Faq';
 import AboutUs from './AboutUs';
-export { Home, AboutUs, Faq }
+import CreateAccount from './CreateAccount';
+export { Home, AboutUs, Faq, CreateAccount }

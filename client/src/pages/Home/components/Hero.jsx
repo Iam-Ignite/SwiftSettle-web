@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 // COMPONENTS
 import TransactModal from './TransactModal';
@@ -26,7 +26,7 @@ const Hero = () => {
                     <h1 className='text-4xl w-[80%] font-ui-bold text-[27px] md:text-left sm:text-left sm:mt-[10vh] sm:w-full sm:text-[24px] sm:leading-[30px]'>Simplified Payment Processing with an <span className='text-primary'>Escrow</span> Approach</h1>
                     <p className='py-5 font-ui-regular text-[16px] text-body-text md:text-left sm:text-[16px] sm:text-left'>Experience effortless payment processing through our innovative Escrow Approach. We simplify and secure transactions, ensuring peace of mind for both senders and receivers. Say goodbye to complexity and embrace a straightforward, secure way to conduct business.</p>
 
-                    <div className='flex justify-between w-fit gap-[16px] sm:flex-col sm:justify-center text-[12px] sm:w-full sm:items-center'>
+                    <div className='flex justify-between w-fit gap-[16px] sm:gap-[3px] modal:flex-col modal:gap-[16px] sm:flex-row sm:justify-between text-[12px] sm:w-full sm:items-center'>
 
                         <button className='flex p-[12.19px] gap-[10px] w-[180px] rounded-[10px] items-center text-white bg-[#0D0033] sm:items-center sm:justify-center'>
                             <img src={appleIcon} alt="link to apple store" />

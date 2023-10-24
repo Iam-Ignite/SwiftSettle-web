@@ -1,5 +1,4 @@
-import WhyUsCard from './WhyUsCard';
-import Navigation from './Navigation';
 import Hero from './Hero';
+import Features from './Features';
 import TransactModal from './TransactModal';
-export { WhyUsCard, Navigation, Hero, TransactModal }
+export { Hero, TransactModal, Features }
