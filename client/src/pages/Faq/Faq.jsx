@@ -1,23 +1,36 @@
+import './Faq.css';
+
+// DATA
+import FaqList from './data';
+
+// GLOBAL COMPONENTS
+import { HowItWorks, Subscribe, Footer } from '../../components';
+
+// LOCAL COMPONENTS
+import { Accordion } from './components';
+
 const Faq = () => {
     return (
-        <section className='sm:mt-[10vh]'>
-            <div>
-                <h1>Frequently Asked Questions (FAQs)</h1>
-            </div>
-            <Accordion />
-        </section>
-    )
-}
-
-const Accordion = ({ question, answer }) => {
-    return (
-        <div>
-            <h3>{question}</h3>
-            <div>
-                <p>{answer}</p>
-            </div>
-        </div>
+        <>
+            <section className='sm:mt-[10vh]'>
+                <div className='py-[125px] sm:py-[75px] relative bg-primary text-center font-ui-semi text-white'>
+                    <div className='overlay absolute'></div>
+                    <h1 className='text-[40px] sm:text-[24px] font-ui-semi'>Frequently Asked Questions (FAQs)</h1>
+                </div>
+                <div className='py-[50px] px-[300px] lg:px-[100px] sm:px-5 bg-white flex flex-col gap-5'>
+                    {FaqList.map(({ question, answer }, index) => <Accordion question={question} answer={answer} key={index + question} />)}
+                </div>
+            </section>
+            {/* HOW IT WORKS */}
+            <HowItWorks />
+            {/* SUBCSCRIBE TO OUR NEWS LETTER */}
+            <Subscribe />
+            {/* FOOTER */}
+            <Footer />
+        </>
     )
 }
 
 export default Faq
+
+
