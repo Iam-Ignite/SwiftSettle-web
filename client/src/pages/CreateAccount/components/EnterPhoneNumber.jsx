@@ -4,6 +4,9 @@ import ContinueBtn from './ContinueBtn'
 
 
 const EnterPhoneNumber = ({ handleNext }) => {
+    function handleClickContinue() {
+        handleNext((prev) => prev + 1)
+    }
     return (
         <Container>
             <h3 className='font-ui-semi text-[24px] text-[##0D0033] mb-5 text-center sm:text-[20px]'>Enter your mobile number</h3>
@@ -14,7 +17,7 @@ const EnterPhoneNumber = ({ handleNext }) => {
                 </div>
             </form>
             <p className='text-center font-ui-regular text-[14px] text-body-text my-5'>When you press 'continue,' Swiftsettle will send you a text message with a verification code. This might cost you some money for messaging and data. You can use the verified phone number to log in</p>
-            <ContinueBtn nextHandler={handleNext} />
+            <ContinueBtn onClickHandler={handleClickContinue} />
         </Container>
     )
 }

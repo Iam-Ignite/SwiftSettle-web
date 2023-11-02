@@ -16,4 +16,6 @@ const MONTHS_OF_THE_YEAR = [
     "December"
 ]
 
-export { MIN_BIRTHYEAR, MAX_BIRTHYEAR, MONTHS_OF_THE_YEAR };
+const IS_VALID_PWD = /^(?=.*[!@#$%^&*()_+\-={}\[\]:;"'<>,.?/\\|0-9A-Z]).+$/
+
+export { MIN_BIRTHYEAR, MAX_BIRTHYEAR, MONTHS_OF_THE_YEAR, IS_VALID_PWD };
