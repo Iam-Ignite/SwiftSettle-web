@@ -28,6 +28,10 @@ const EnterDOB = ({ handleNext }) => {
         BIRTH_DAYS.push(day)
     }
 
+    function handleClickContinue() {
+        handleNext((prev) => prev + 1)
+    }
+
     return (
         <Container>
             <h3 className='font-ui-semi text-[20px] text-center text-[#0D0033] mb-5'>Hey Dollipop, Tell us when you were born</h3>
@@ -64,7 +68,7 @@ const EnterDOB = ({ handleNext }) => {
                 </div>
             </div>
             <p className='font-ui-regular text-[14px] text-body-text text-center mt-5'>You must be atleast 18years to use Swiftsettle</p>
-            <ContinueBtn nextHandler={handleNext} />
+            <ContinueBtn onClickHandler={handleClickContinue} />
         </Container>
     )
 };

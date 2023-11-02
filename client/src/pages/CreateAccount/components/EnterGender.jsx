@@ -8,6 +8,10 @@ import { useState } from 'react';
 const EnterGender = ({ handleNext }) => {
     const [userGender, setUserGender] = useState('female');
 
+    function handleClickContinue() {
+        handleNext((prev) => prev + 1)
+    }
+
     return (
         <Container>
             <h3 className='font-ui-semi text-[20px] text-center text-[#0D0033] mb-5'>What is your Gender?</h3>
@@ -19,7 +23,7 @@ const EnterGender = ({ handleNext }) => {
                 {userGender === 'male' ? <BsRecordCircleFill color='#6E3EFF' size={24} /> : <BiCircle color='#808080' size={24} />}
                 <p>Man</p>
             </div>
-            <ContinueBtn nextHandler={handleNext} />
+            <ContinueBtn onClickHandler={handleClickContinue} />
         </Container>
     )
 }

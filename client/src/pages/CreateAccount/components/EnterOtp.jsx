@@ -8,6 +8,10 @@ import ContinueBtn from './ContinueBtn';
 const EnterOtp = ({ handleNext }) => {
     const [OTP, setOTP] = useState('');
 
+    function handleClickContinue() {
+        handleNext(prev => prev + 1)
+    }
+
     return (
         <Container>
             <h3 className='font-ui-semi text-[20px] text-center text-[#0D0033] mb-5'>Enter the six-digit code that was sent to you</h3>
@@ -17,7 +21,7 @@ const EnterOtp = ({ handleNext }) => {
                 </div>
                 <h4 className='font-ui-semi text-[14px] text-center mt-[10px] text-[#0D0033] underline'>Change Number</h4>
             </div>
-            <ContinueBtn nextHandler={handleNext} />
+            <ContinueBtn onClickHandler={handleClickContinue} />
             <h4 className='text-primary text-center underline text-[14px] font-ui-semi sm:mt-5'>Resend</h4>
         </Container>
     )

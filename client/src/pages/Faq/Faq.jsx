@@ -11,7 +11,7 @@ import { Accordion } from './components';
 
 const Faq = () => {
     return (
-        <>
+        <div className='min-h-screen w-full'>
             <section className='sm:mt-[10vh]'>
                 <div className='py-[125px] sm:py-[75px] relative bg-primary text-center font-ui-semi text-white'>
                     <div className='overlay absolute'></div>
@@ -27,7 +27,7 @@ const Faq = () => {
             <Subscribe />
             {/* FOOTER */}
             <Footer />
-        </>
+        </div>
     )
 }
 

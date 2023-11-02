@@ -6,7 +6,7 @@ import { ChooseUs, HowItWorks, Subscribe, Footer } from '../../components';
 
 const AboutUs = () => {
     return (
-        <>
+        <div className='min-h-screen w-full'>
             <section className='sm:mt-[10vh] flex justify-between bg-[#FAFAFA] px-[60px] py-[100px] sm:py-[80px] gap-[80px] items-stretch md:flex-col sm:px-5'>
                 <div className="left flex-1">
                     <h1 className='font-ui-bold text-[32px] mb-5 sm:text-center sm:text-[28px]'>About <span className='text-primary'>Us</span></h1>
@@ -31,7 +31,7 @@ const AboutUs = () => {
             <Subscribe />
             {/* FOOTER */}
             <Footer />
-        </>
+        </div>
     )
 }
 

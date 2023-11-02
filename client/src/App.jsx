@@ -4,7 +4,7 @@ import './App.css';
 
 import { Navigation } from './components';
 
-import { Home, AboutUs, Faq, CreateAccount } from './pages';
+import { Home, AboutUs, Faq, CreateAccount, Login, ForgotPassword } from './pages';
 
 const App = () => {
   return (
@@ -13,6 +13,8 @@ const App = () => {
       <Route index element={<Home />} />
       <Route path='/about' element={<AboutUs />} />
       <Route path='/faq' element={<Faq />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/forgotPassword' element={<ForgotPassword />} />
       <Route path='/signup' element={<CreateAccount />} />
       <Route path='*' element={"NOT FOUND"} />
     </Routes>
